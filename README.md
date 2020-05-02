@@ -1,5 +1,5 @@
 # KindaManga
-This is a desktop app that allows you to scrap mangas using JikanDotNet library
+This is a desktop app that allows you to collect mangas using JikanDotNet library
 
 Using guide:
 
