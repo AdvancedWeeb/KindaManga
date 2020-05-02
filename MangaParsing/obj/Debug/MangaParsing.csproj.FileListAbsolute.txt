@@ -1,0 +1,11 @@
+C:\Users\temab\source\repos\KindaManga\MangaParsing\bin\Debug\MangaParsing.dll
+C:\Users\temab\source\repos\KindaManga\MangaParsing\bin\Debug\MangaParsing.pdb
+C:\Users\temab\source\repos\KindaManga\MangaParsing\bin\Debug\JikanDotNet.dll
+C:\Users\temab\source\repos\KindaManga\MangaParsing\bin\Debug\Newtonsoft.Json.dll
+C:\Users\temab\source\repos\KindaManga\MangaParsing\bin\Debug\JikanDotNet.xml
+C:\Users\temab\source\repos\KindaManga\MangaParsing\bin\Debug\Newtonsoft.Json.xml
+C:\Users\temab\source\repos\KindaManga\MangaParsing\obj\Debug\MangaParsing.csprojAssemblyReference.cache
+C:\Users\temab\source\repos\KindaManga\MangaParsing\obj\Debug\MangaParsing.csproj.CoreCompileInputs.cache
+C:\Users\temab\source\repos\KindaManga\MangaParsing\obj\Debug\MangaParsing.csproj.CopyComplete
+C:\Users\temab\source\repos\KindaManga\MangaParsing\obj\Debug\MangaParsing.dll
+C:\Users\temab\source\repos\KindaManga\MangaParsing\obj\Debug\MangaParsing.pdb
