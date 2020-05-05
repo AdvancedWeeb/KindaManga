@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="Manga Desktop" Height="500" Width="900" ResizeMode="CanMinimize">
     <Window.Resources>
-        <DataTemplate x:Key="mainDataTemplate">
+        <DataTemplate x:Key="MainDataTemplate">
             <ListBoxItem></ListBoxItem>
         </DataTemplate>
-        <ItemsPanelTemplate x:Key="mainItemTemplate">
+        <ItemsPanelTemplate x:Key="MainItemTemplate">
             <WrapPanel></WrapPanel>
         </ItemsPanelTemplate>
-        <Style x:Key="readButton" TargetType="Button">
+        <Style x:Key="ReadButton" TargetType="Button">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -39,7 +39,7 @@
                             <TextBlock  Width="150" Text="{Binding Name}" FontSize="15" Height="24" />
                             <TextBlock FontSize="16" Text="Score:" />
                             <TextBlock FontSize="16" Text="{Binding Score}" Width="122" Margin="0 0 5 0"/>
-                            <Button Click="readButtonClickEventHandler" Tag="{Binding ReadingUrl}" FontSize="20" Content="Read!" Style="{StaticResource readButton}" Height="34" Width="150"></Button>
+                            <Button Click="readButtonClickEventHandler" Tag="{Binding ReadingUrl}" FontSize="20" Content="Read!" Style="{StaticResource ReadButton}" Height="34" Width="150"></Button>
                         </WrapPanel>
                     </ControlTemplate>
                 </Setter.Value>
@@ -55,10 +55,10 @@
             <RowDefinition Height="410"/>
         </Grid.RowDefinitions>
         <TextBox Name="SearchBox" BorderBrush="Black" Margin="200,5,147,22"/>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="767,6,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="searchButtonClickEventHandler"/>
-        <Label Content="Enter a manga's name right here:" Margin="0,4,700,0" VerticalAlignment="Top"/>
+        <Button Grid.Row="0" Content="Search" HorizontalAlignment="Left" Margin="767,6,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="searchButtonClickEventHandler"/>
+        <Label Grid.Row="0" Content="Enter a manga's name right here:" Margin="0,4,700,0" VerticalAlignment="Top"/>
         <ScrollViewer Grid.Row="1">
-            <ItemsControl Grid.Row="1" ItemTemplate="{StaticResource mainDataTemplate}" ItemsPanel="{StaticResource mainItemTemplate}" Name="MangasControl">
+            <ItemsControl ItemTemplate="{StaticResource MainDataTemplate}" ItemsPanel="{StaticResource MainItemTemplate}" Name="MangasControl">
             </ItemsControl>
         </ScrollViewer>
     </Grid>
