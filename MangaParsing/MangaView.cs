@@ -1,4 +1,4 @@
-﻿namespace MangaDesktop
+﻿namespace MangaParsing
 {
     public class MangaView
     {

@@ -1,6 +1,6 @@
 ﻿using JikanDotNet;
-using MangaDesktop;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MangaParsing
 {
@@ -20,19 +20,14 @@ namespace MangaParsing
             MangaSearchResult searching = await jikan.SearchManga(name);
 
             if (searching?.Results.Count > 0)
-                OnMangaHasBeenFoundedEventHandler?.Invoke(castIntoMangaView(searching.Results));
+                OnMangaHasBeenFoundedEventHandler?.Invoke(CastIntoMangaView(searching.Results));
             else
                 OnMangasHasNotBeenFoundedEventHandler?.Invoke();
         }
 
-        private List<MangaView> castIntoMangaView(ICollection<MangaSearchEntry> entry)
+        private static List<MangaView> CastIntoMangaView(IEnumerable<MangaSearchEntry> entry)
         {
-            List<MangaView> result = new List<MangaView>();
-
-            foreach (MangaSearchEntry anEntry in entry)
-                result.Add(new MangaView(anEntry.ImageURL, anEntry.Title, anEntry.URL, " " + anEntry.Score.ToString(), anEntry.Chapters, anEntry.Volumes.Value));
-
-            return result;
+            return (from anEntry in entry where anEntry.Volumes != null select new MangaView(anEntry.ImageURL, anEntry.Title, anEntry.URL, " " + anEntry.Score, anEntry.Chapters, anEntry.Volumes.Value)).ToList();
         }
     }
 }
